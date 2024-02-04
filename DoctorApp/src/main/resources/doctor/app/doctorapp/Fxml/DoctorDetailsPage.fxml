@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="297.0" prefWidth="410.0" style="-fx-background-color: #44A5FF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctor.app.doctorapp.DoctorDetailsPageController">
+   <children>
+      <Region layoutX="30.0" layoutY="30.0" prefHeight="244.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 0 0 15 15;">
+         <effect>
+            <DropShadow height="18.06" radius="12.195" spread="0.01" width="32.72">
+               <color>
+                  <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Region>
+      <Region layoutX="30.0" layoutY="30.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 0 0 15 0;">
+         <effect>
+            <DropShadow height="18.06" radius="12.195" spread="0.01" width="32.72">
+               <color>
+                  <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Region>
+      <Button layoutX="310.0" layoutY="30.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: white; -fx-background-radius: 0 0 0 15;" stylesheets="@../Css/HomePage2.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#595959" layoutX="70.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="firstName" editable="false" layoutX="190.0" layoutY="100.0" prefHeight="25.0" prefWidth="143.0" />
+      <Text fill="#595959" layoutX="71.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="lastName" editable="false" layoutX="190.0" layoutY="140.0" prefHeight="25.0" prefWidth="143.0" />
+      <Text fill="#595959" layoutX="68.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="contact" editable="false" layoutX="190.0" layoutY="180.0" prefHeight="25.0" prefWidth="143.0" />
+      <TextField fx:id="hospital" editable="false" layoutX="190.0" layoutY="220.0" prefHeight="25.0" prefWidth="143.0" />
+      <Text fx:id="doctorText" layoutX="30.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Doe" textAlignment="CENTER" wrappingWidth="250.0">
+         <font>
+            <Font name="Agency FB Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#595959" layoutX="66.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hospital:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

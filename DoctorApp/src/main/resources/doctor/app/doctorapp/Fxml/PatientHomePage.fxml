@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: #98CDFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctor.app.doctorapp.PatientHomePageController">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="75.0" layoutX="75.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/hospital.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="hospitalName" fill="#595959" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alpha Health Care" textAlignment="CENTER" wrappingWidth="225.13671875">
+         <font>
+            <Font name="Agency FB Bold" size="25.0" />
+         </font>
+      </Text>
+      <Line endX="75.0" layoutX="115.0" layoutY="180.0" startX="-75.0" stroke="WHITE" strokeWidth="3.0" />
+      <Button fx:id="patientButton" layoutX="-2.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="60.0" prefWidth="227.0" stylesheets="@../Css/HomePage.css" text="         Patient">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" translateX="24.0">
+               <image>
+                  <Image url="@../Images/patient.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="-65.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-2.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToDoctorDetailsPage" prefHeight="60.0" prefWidth="227.0" stylesheets="@../Css/HomePage.css" text="     Doctor">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" translateX="4.0">
+               <image>
+                  <Image url="@../Images/doctor.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="-50.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="45.0" layoutY="337.0" maxWidth="0.0" minWidth="140.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: white; -fx-background-radius: 20;" stylesheets="@../Css/HomePage2.css" text="Logout">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+               <image>
+                  <Image url="@../Images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Button>
+      <Region layoutX="225.0" prefHeight="395.0" prefWidth="823.0" style="-fx-background-color: #44A5FF; -fx-background-radius: 50 0 0 50;">
+         <effect>
+            <DropShadow height="32.72" radius="15.86" spread="0.01" width="32.72">
+               <color>
+                  <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Region>
+      <Region layoutX="259.0" layoutY="21.0" prefHeight="60.0" prefWidth="442.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow height="32.72" radius="15.86" spread="0.01" width="32.72">
+               <color>
+                  <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Region>
+      <Text fx:id="patientName" fill="#595959" layoutX="274.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back, John" textAlignment="CENTER" wrappingWidth="413.0">
+         <font>
+            <Font name="Agency FB Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#595959" layoutX="298.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OIB:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="OIB" editable="false" layoutX="335.0" layoutY="110.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="255.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="password" editable="false" layoutX="335.0" layoutY="155.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="295.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="455.0" layoutY="200.0" maxHeight="30.0" maxWidth="30.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#editAge" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-color: black;" stylesheets="@../Css/HomePage2.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="ageImage" fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="age" editable="false" layoutX="335.0" layoutY="200.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="295.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="sex" editable="false" layoutX="335.0" layoutY="245.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="485.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="676.0" layoutY="110.0" maxHeight="30.0" maxWidth="30.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#editAddress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-color: black;" stylesheets="@../Css/HomePage2.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="addressImage" fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="address" editable="false" layoutX="556.0" layoutY="110.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="487.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="676.0" layoutY="155.0" maxHeight="30.0" maxWidth="30.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#editContact" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-color: black;" stylesheets="@../Css/HomePage2.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="contactImage" fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="contact" editable="false" layoutX="556.0" layoutY="155.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="245.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Type:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="bloodType" editable="false" layoutX="335.0" layoutY="290.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="496.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="height" editable="false" layoutX="556.0" layoutY="200.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="492.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="weight" editable="false" layoutX="556.0" layoutY="245.0" prefHeight="25.0" prefWidth="120.0" />
+      <Text fill="#595959" layoutX="470.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insurance:">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="insurance" editable="false" layoutX="556.0" layoutY="290.0" prefHeight="25.0" prefWidth="120.0" />
+      <Group layoutX="718.0" layoutY="11.0">
+         <children>
+            <Region layoutX="15.0" layoutY="15.0" prefHeight="166.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
+               <effect>
+                  <DropShadow height="0.48" radius="7.799999999999999" spread="0.01" width="32.72">
+                     <color>
+                        <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Region>
+            <Region layoutX="15.0" layoutY="15.0" prefHeight="46.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
+               <effect>
+                  <DropShadow height="15.13" radius="11.4625" spread="0.01" width="32.72">
+                     <color>
+                        <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Region>
+            <Text fill="#595959" layoutX="29.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming appointments" textAlignment="CENTER" wrappingWidth="215.29296875">
+               <font>
+                  <Font name="Agency FB" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="appointmentTable" layoutX="15.0" layoutY="71.0" prefHeight="92.0" prefWidth="301.0">
+               <columns>
+                  <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Date" />
+                  <TableColumn fx:id="timeColumn" prefWidth="85.0" text="Time" />
+                  <TableColumn fx:id="symptomsColumn" prefWidth="114.0" text="Symptoms" />
+               </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Group layoutX="718.0" layoutY="191.0">
+         <children>
+            <Region layoutX="15.0" layoutY="15.0" prefHeight="172.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
+               <effect>
+                  <DropShadow height="0.48" radius="7.799999999999999" spread="0.01" width="32.72">
+                     <color>
+                        <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Region>
+            <Region layoutX="15.0" layoutY="15.0" prefHeight="46.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;">
+               <effect>
+                  <DropShadow height="15.13" radius="11.4625" spread="0.01" width="32.72">
+                     <color>
+                        <Color red="0.18421052396297455" green="0.18421052396297455" blue="0.18421052396297455" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Region>
+            <Text fill="#595959" layoutX="29.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active prescriptions" textAlignment="CENTER" wrappingWidth="215.29296875">
+               <font>
+                  <Font name="Agency FB" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="prescriptionTable" layoutX="15.0" layoutY="68.0" prefHeight="98.0" prefWidth="301.0">
+               <columns>
+                  <TableColumn fx:id="doctorColumn" prefWidth="85.0" text="Doctor" />
+                  <TableColumn fx:id="patientColumn" prefWidth="99.0" text="Patient" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="115.0" text="Description" />
+               </columns>
+            </TableView>
+         </children>
+      </Group>
+      <Button layoutX="380.0" layoutY="342.0" maxHeight="30.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#openMedicalRecord" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: white; -fx-background-radius: 15;" stylesheets="@../Css/HomePage2.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="180.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/medicalRecord.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

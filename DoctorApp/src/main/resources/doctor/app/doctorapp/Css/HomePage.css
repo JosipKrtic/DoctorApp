@@ -1,0 +1,12 @@
+.button {
+	-fx-background-color: #98CDFF;
+}
+
+.button:hover {
+	-fx-background-color: #44A5FF;
+	-fx-border-color: #595959;
+}
+
+.table-view:focused{
+	-fx-border-color: white;
+}
