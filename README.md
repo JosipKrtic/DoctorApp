@@ -1,4 +1,5 @@
 <h1 align="center">DoctorApp JavaFX Application with Microsoft SQL Server connection</h1>
+<h3><b>The video of working application(DoctorAppVideo.wmv) is placed inside Images folder</b></h3><br>
 <ul align"left">The following was implemented inside the application and database:
     <li>8 entities</li>
     <li>CRUD operations</li>
